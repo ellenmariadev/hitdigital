@@ -428,9 +428,3 @@ Na prática, a combinação **bulk endpoint + cache + fila para lotes muito gran
 custo próximo de O(1) em chamadas de rede por requisição, independente do número de IDs.
 
 ---
-
-## Próximos passos
-
-- [ ] Concorrência limitada e retry/429 no backend.
-- [ ] Histórico/auditoria das consultas (opcional) e endpoint em lote no provider.
-- [ ] Testes automatizados e build/CI do frontend.
