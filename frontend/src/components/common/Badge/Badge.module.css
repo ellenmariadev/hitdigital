@@ -1,0 +1,32 @@
+.badge {
+  border-radius: var(--radius-pill);
+  padding: 0.1rem 0.55rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+.info {
+  background: var(--color-accent-soft);
+  color: var(--color-accent);
+}
+
+.danger {
+  background: var(--color-danger-soft);
+  color: var(--color-danger);
+}
+
+.neutral {
+  background: var(--color-tag-neutral);
+  color: var(--color-text);
+}
+
+.purple {
+  background: var(--color-tag-purple);
+  color: var(--color-tag-text);
+}
+
+.green {
+  background: var(--color-tag-green);
+  color: var(--color-tag-text);
+}

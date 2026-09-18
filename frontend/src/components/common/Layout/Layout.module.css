@@ -1,0 +1,19 @@
+.page {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 2rem var(--space-md) 4rem;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
+}
+
+.header__title {
+  margin: 0 0 var(--space-xs);
+  font-size: 1.6rem;
+  color: var(--color-text);
+}
+
+.header__subtitle {
+  margin: 0;
+  color: var(--color-text-muted);
+}

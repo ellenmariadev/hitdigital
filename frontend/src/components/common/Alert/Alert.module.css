@@ -1,0 +1,23 @@
+.alert {
+  border-radius: var(--radius-md);
+  padding: var(--space-md) 1rem;
+  border: 1px solid transparent;
+}
+
+.error {
+  background: var(--color-danger-soft);
+  border-color: var(--color-danger-border);
+  color: var(--color-danger);
+}
+
+.info {
+  background: var(--color-accent-soft);
+  border-color: var(--color-border-strong);
+  color: var(--color-accent);
+}
+
+.success {
+  background: rgba(163, 230, 53, 0.12);
+  border-color: #5b8a1e;
+  color: var(--color-tag-green);
+}
