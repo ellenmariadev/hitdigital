@@ -1,0 +1,34 @@
+version: "3.8"
+services:
+  db:
+    image: postgres:17-alpine
+    container_name: hitdigital-db
+    environment:
+      POSTGRES_USER: hitdigital
+      POSTGRES_PASSWORD: hitdigital
+      POSTGRES_DB: hitdigital
+    ports:
+      - "5433:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U hitdigital -d hitdigital"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+
+  backend:
+    build: .
+    container_name: hitdigital-backend
+    environment:
+      DATABASE_URL: postgresql+asyncpg://hitdigital:hitdigital@db:5432/hitdigital
+      DB_ECHO: "false"
+      CACHE_BACKEND: postgres
+      CACHE_TTL_SECONDS: "300"
+    ports:
+      - "8000:8000"
+    depends_on:
+      - db
+
+volumes:
+  pgdata:
